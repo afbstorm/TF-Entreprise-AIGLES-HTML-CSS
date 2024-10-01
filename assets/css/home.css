@@ -1,0 +1,47 @@
+.header-container {
+    position: relative; /* Optionnel, par défaut est en relative */
+    width: 80%; /* Définit la largeur d'un élément */
+    height: 5rem; /* Définit la hauteur d'un élément */
+    /* border: 1px red solid; --> Ajoutes une bordure à l'élément ses paramètre sont taille-couleur-type */
+    margin: 0 auto; /* Permet de centrer facilement un élément par rapport à son parent */
+
+    .header-nav {
+        background-color: rgb(212, 227, 222);
+        height: 5rem;
+        display: flex; /* Va définir que l'élément est en flexbox ce qui va faciliter son placement */
+        align-items: center;
+        /* justify-content: flex-end; -- > Justify l'entièreté du ul */
+
+        .header-nav-links {
+            display: flex;
+            justify-content: flex-end; /* --> Justify les li */
+            width: 100%;
+            gap: 2rem;
+            margin-right: 2rem;
+            list-style-type: none;
+
+            & a {
+                text-decoration: none;
+                color: cadetblue;
+
+                &:hover { /* :hover est une pseudo-classe qui permet d'effectuer un
+                    ajustement de style au survol de la souris sur l'élément */
+                    color: rgb(42, 205, 210);
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/* Démo padding / margin */
+
+.borders {
+    border: 1px red solid;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 5rem; /* Sert à créer ou accentuer la bordure extérieure ciblée */
+    padding-top: 5rem; /* Sert à créer ou accentuer la bordure intérieure ciblée (sans affecter l'extérieur) */
+}

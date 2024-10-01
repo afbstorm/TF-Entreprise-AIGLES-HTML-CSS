@@ -17,3 +17,61 @@ ul {
         color: orange;
     }
 }
+
+
+
+/* 
+    - px : majoritairement utilisé pour les besoins précis (au pixel près)
+    - em : Va sa baser sur la taille de son plus proche parent
+        <div style="font-size: 12px">
+            <p style="font-size: 2em">Je suis l'enfant de la DIV</p> --> 24px
+        </div>
+    - rem : Va se baser sur la taille du root element -> 16px
+        <div style="font-size: 12px">
+            <p style="font-size: 2rem">Je suis l'enfant de la DIV</p> --> 32px
+        </div>
+    - vw (view width) : Relatif à la largeur de l'écran de l'utilisateur
+    - vh (view height) : Relatif à la hauteur de l'écran de l'utilisateur
+    - % : Relatif à un pourcentage du parent direct
+*/
+
+/* 
+    SELECTORS : 
+
+    - div : Par tag html
+    - # : Par id sur élément html
+    - . : Par class sur élément html
+
+    COMBINED SELECTORS : 
+    - , : Va grouper les éléments html (ou class ou id) indiqués et 
+        leur appliquer la même règle CSS
+        html, body {}
+    - > : Va cibler l'enfant direct d'un élément html
+        <div>
+            <p> ---> div > p
+        </div>
+    - ' ' : Va cibler tous les enfants d'un élément html 
+        <div>
+            <p></p>
+            <div>
+                <p></p> 
+            </div>
+        </div> --> div p
+    - + : Va grouper les éléments adjacents (siblings)
+        <p></p>
+        <a href=''> --> p + a
+    - ~ : Va grouper les éléments indiqués situés sur le même niveau 
+        <p></p> -- > prit
+        <div></div>
+        <img>
+        <a href=''> --> prit
+*/
+
+/* 
+    POSITION:
+    - relative : Position par défaut de tout élément en css. 
+                Elle est configurable par rapport à des dimensions
+    - absolute : Position qui dépend de la position relative du parent
+    - fixed : Positionne un élément de manière fixe et suit l'utilisateur dans son scroll
+    - sticky : Positionne un élément de manière fixe et n'est pas affectée par un scroll
+*/
