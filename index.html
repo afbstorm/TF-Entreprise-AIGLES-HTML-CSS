@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ceci est un commentaire -->
+
+     <!-- Le header sert d'en-tête à la page web (ou à la section où le tag se situe) -->
+    <header>
+        <nav>
+            <!-- La balise <ul></ul> est faite pour créer une liste à puce -->
+            <ul>
+                <li>
+                    Contact
+                </li>
+                <li>
+                    About Us
+                </li>
+            </ul>
+
+            <!-- La balise <ol></ol> est faite pour créer une liste numérotée -->
+            <ol>
+                <li>
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+                <li>
+                    About Us
+                </li>
+            </ol>
+        </nav>
+    </header>
+
+    <!-- le main sert de corps (contenu du site hors header / footer) -->
+    <main>
+        <section>
+            <!-- Le header peut également se situer dans les balises section -->
+            <header>
+                <!-- La balise p sert à afficher du texte simple -->
+                <p>En-tête de la section</p>
+                <!-- La balise br sert à créer un retour à la ligne -->
+                <br>
+                <p>Retour à la ligne effectué</p>
+            </header>
+            <!-- La balise div dite balise " block " sert à 
+             créer un container de mise en page pour les éléments à l'intérieur -->
+            <div>
+                <!-- La balise a sert à créer un lien, ce lien peut être : 
+                  - interne à la page (voir #image)
+                  - vers une source externe à l'application (voir https://google.be (footer))
+                  - vers une source interne à l'application (voir ./contact.html) -->
+                <a href="./contact.html">Vers notre page de contact</a>
+                <a href="#image">Vers les images</a>
+            </div>
+            <div>
+                <!-- La balise table permet de déclarer un bloc tableau -->
+                <table>
+                    <!-- La balise tr permet de déclarer une row (une ligne) au tableau -->
+                    <tr>
+                        <!-- La balise th permet de déclarer un titre au tableau -->
+                        <th>Colonne 1</th>
+                        <th>Colonne 2</th>
+                    </tr>
+                    <tr>
+                        <!-- La balise td permet de déclarer du contenu de colonne au tableau 
+                         (⚠️ il faut que l'ordre soit identique à celui des titres) -->
+                        <td>Contenu de la colonne 1</td>
+                        <td>Contenu de la colonne 2</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- La balise article est identique à la section de part son fonctionnement si ce n'est qu'elle est
+             majoritairement utilisée pour afficher du contenu indépendant au contenu de la section dans laquelle
+             elle se situe -->
+            <article>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titre colonne 1</th>
+                            <th>Titre colonne 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Contenu colonne 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        
+        <div>
+            <p>Balise <strong>paragraphe</strong>, sert <span style="color: brown;">principalement</span> à l'affichage des <em>textes</em></p>
+            <!-- Les balises h. servent à afficher du texte a des formats se démarquant plus que le paragraphe de base
+             Utilisé pour des titres -->
+            <h1>Titre avec h1</h1>
+            <h2>Titre avec h2</h2>
+            <h3>Titre avec h3</h3>
+            <h4>Titre avec h4</h4>
+            <h5>Titre avec h5</h5>
+            <h6>Titre avec h6</h6>
+        </div>
+    </main>
+
+    <!-- Le footer sert de pied de page à la page web -->
+    <footer>
+        <!-- La balise img sert à afficher des images, elle contient 2 attributs obligatoires :
+         - src qui est la source de l'image
+         - alt qui sert à expliciter le contenu de l'image
+         - et de manière optionnelle : title qui sert à afficher au survol de l'image un texte -->
+        <img 
+            id="image"
+            src="https://www.fonddelanoye.fr/media/cache/conversions/breeder/434/breeding/elevage-du-fond-de-la-noye/animal/11732-chiot-golden-retriever/photos/45946/chiot-golden-retriever-sable-elevage-du-fond-de-la-noye-0-big.jpg" 
+            alt="Golden Retriever">
+        <img src="./assets/images/golden.jpg" alt="Golden 2" title="Golden trop mignon">
+
+        <a href="https://www.google.be" target="_blank">Lien vers Google</a>
+    </footer>
+</body>
+</html>
