@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cours HTML-CSS</title>
+    <!-- <style>
+        nav {
+            border: 1px solid red;
+        }
+
+        #phead {
+            font-size: 24px;
+            font-weight: bolder;
+            color: rgb(87, 87, 180);
+        }
+
+        .liens {
+            text-decoration: none;
+            color: chartreuse;
+            margin: 15px 15px 15px 15px;
+            /* margin: 15px 30px;
+            margin-top: 15px;
+            margin-right: 30px; */
+        }
+    </style> -->
+    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
 </head>
 <body>
     <!-- Ceci est un commentaire -->
@@ -39,7 +61,7 @@
             <!-- Le header peut également se situer dans les balises section -->
             <header>
                 <!-- La balise p sert à afficher du texte simple -->
-                <p>En-tête de la section</p>
+                <p id="phead">En-tête de la section</p>
                 <!-- La balise br sert à créer un retour à la ligne -->
                 <br>
                 <p>Retour à la ligne effectué</p>
@@ -51,8 +73,8 @@
                   - interne à la page (voir #image)
                   - vers une source externe à l'application (voir https://google.be (footer))
                   - vers une source interne à l'application (voir ./contact.html) -->
-                <a href="./contact.html">Vers notre page de contact</a>
-                <a href="#image">Vers les images</a>
+                <a href="./contact.html" class="liens">Vers notre page de contact</a>
+                <a href="#image" class="liens">Vers les images</a>
             </div>
             <div>
                 <!-- La balise table permet de déclarer un bloc tableau -->

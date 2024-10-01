@@ -1,0 +1,19 @@
+nav {
+    border: 1px solid red;
+}
+
+/* ul {
+    list-style-type: none;
+}
+
+ul > li {
+    color: orange;
+} */
+
+ul {
+    list-style-type: none;
+
+    & li {
+        color: orange;
+    }
+}

@@ -7,5 +7,39 @@
 </head>
 <body>
     <h2>Contact</h2>
+
+    <main>
+        <section>
+            <!-- La balise form possède deux attributs :
+                - action : Va au submit du formulaire (à l'envoi) envoyer les données sur le lien indiqué
+                - method : Va concerner la méthode HTTP utilisée par le formulaire
+                    - post : Va permettre d'envoyer les données à un serveur
+                    - get : Va permettre de récupérer des données par rapport à des entrées utilisateur -->
+            <form action="https://httpbin.dev/post" method="post">
+                <label for="username"> Username
+                    <input type="text" name="username" id="username" placeholder="Username...">
+                <label for="password"> Password
+                    <input type="password" name="password" id="password" placeholder="Password...">
+                <label for="description">
+                    <textarea name="description" id="description"></textarea>
+
+                <!-- <input type="submit" value="Envoyer"> -->
+                <button type="submit">
+                    <img src="./assets/images/submit-icon.svg" alt="Submit">
+                    Envoyer via bouton
+                </button>
+            </form>
+        </section>
+        <br>
+        <section>
+            <form action="https://httpbin.dev/get" method="get">
+                <label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Entrez votre prénom...">
+                </label>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
