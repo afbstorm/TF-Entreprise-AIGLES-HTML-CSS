@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Appel de l'objet tailwind.config pour modifier
+      // ou créer un nouveau thème.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              randomChartreuse: "#7fff00",
+              // text-randomChartreuse
+              // bg-randomChartreuse
+              // ...
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-50 to-blue-100 min-h-screen flex flex-col"
+  >
+    <!--  bg-gradient-to-r : Crée un dégradé de gauche à droite 
+        from-blue-50 : Commence avec un bleu très très clair
+        to-blue-100 : Termine avec un bleu un peu plus foncé
+        min-h-screen : Permet de fixer la hauteur de l'élément à la hauteur de l'écran
+        flex : Crée un display en flex
+        flex-col : Aligner les éléments enfants verticalement (flex-direction: column;)
+        [element]-{couleur}-{value - 50 à 950} - la value est optionnelle
+        -->
+
+    <header class="bg-white shadow-md">
+      <!-- bg-white : Met le background-color de l'élément en blanc
+              shadow-md : Ajoute une ombre légère sous le header (box-shadow) -->
+      <nav class="container mx-auto p-6 flex justify-between items-center">
+        <!-- container : Définit une largeur maximale (ici 100%) avec des marges automatiques
+          mx-auto : Centre automatiquement l'élément
+          p-6: Ajoute un padding de 1.5rem sur la nav (unité de mesure tailwind : le rem ou 1 = 0.25rem)
+          justify-between : Crée un espace entre les enfants de l'élément (justify-content: space-between)
+          items-center : Crée un alignement vertical des enfants en les centrant -->
+
+        <h1 class="text-2xl font-bold text-blue-600">
+          Présentation de tailwindcss
+        </h1>
+        <!-- text-2xl : Agrandit le texte à 1.5rem et le line-height à 2rem 
+              font-bold : Met le texte en gras
+              text-blue-600 : Change la couleur du texte en bleu semi-foncé -->
+
+        <ul class="flex space-x-6">
+          <!-- space-x-6 : Ajoute un espace horizontal de 1.5rem entre chaque élément -->
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition">
+              <!-- hover:text-blue-500 : Change la couleur du texte au survol (:hover)
+               transition : Ajoute une transition en douceur lors du changement de couleur -->
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="bg-blue-600 text-white py-16">
+      <!-- py-16 : Padding vertical de 4rem -->
+      <div class="container mx-auto text-center">
+        <!-- text-center : Centre le texte horizontalement -->
+        <h2 class="text-4xl font-bold mb-4">
+          <!-- mb-4 : Margin bottom de 1rem -->
+          Bienvenue
+        </h2>
+        <p class="text-lg">
+          Admirez nos belles cards faites avec tailwindcss !
+        </p>
+      </div>
+    </section>
+
+    <main class="container mx-auto py-12">
+      <div
+        class="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0"
+      >
+        <!-- md:flex-row : Aligne les enfants horizontalement à partir de 768px (md)
+            md:space-x-6 : Change l'orientation de l'espacement selon la résolution (md : 768px)
+            md:space-y-0 : Supprime l'espacement vertical à partir de " md "-->
+        <div
+          class="bg-white shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 rounded-lg p-6"
+        >
+          <h3 class="text-2xl font-bold mb-4">Titre de la card 1</h3>
+
+          <p class="text-gray-600 mb-4">
+            Ceci est le contenu de ma première card. Et si on en rajoutait
+            d'autres ?
+          </p>
+
+          <button
+            class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+          >
+            <!-- rounded : Permet d'arrondir les bords -->
+            Voir plus...
+          </button>
+        </div>
+
+        <div
+          class="bg-white shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 rounded-lg p-6"
+        >
+          <h3 class="text-2xl font-bold mb-4">Titre de la card 2</h3>
+
+          <p class="text-gray-600 mb-4">
+            Ceci est le contenu de ma seconde card. Bla... Bla...
+          </p>
+
+          <button
+            class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+          >
+            Voir plus...
+          </button>
+        </div>
+
+        <div
+          class="bg-white shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 rounded-lg p-6"
+        >
+          <h3 class="text-2xl font-bold mb-4">Titre de la card 3</h3>
+
+          <p class="text-gray-600 mb-4">
+            Ceci est le contenu de ma troisième card. Très sympa ce tailwindcss
+          </p>
+
+          <button
+            class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+          >
+            Voir plus...
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-8">
+      <div class="container mx-auto text-center">
+        <p>©️ 2024 Mes super cards. Tous droits réservés.</p>
+
+        <ul class="flex justify-center space-x-6 mt-4">
+          <li>
+            <a href="#" class="hover:text-white transition"
+              >Politique de confidentialité</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition"
+              >Conditions d'utilisation</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition"
+              >Apprennez à créer des cards</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
